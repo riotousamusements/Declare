@@ -5,13 +5,19 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<%= link_to "declare", root_path %>
-	<%= link_to "about", about_path %>
-	<%= link_to "contact", contact_path %>
-	<%= yield %>
-	©2015 Riotous Amusements
+
+	<%= render "layouts/header" %>
+	<br><br><br>
+	<div class="container">
+		<%= yield %>
+		<p align="right">©2015 Riotous Amusements</p>
+	</div>
+
+
+
 </body>
 </html>
